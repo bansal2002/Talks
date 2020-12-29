@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/find_friend_option"
+        android:title="Find friends"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/request_option"
+        android:title="Requests"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/create_group_option"
+        android:title="Create group"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/setting_option"
+        android:title="Profile"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/logout_option"
+        android:title="Logout"
+        app:showAsAction="never"/>
+
+</menu>

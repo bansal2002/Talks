@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="5dp"
+    android:padding="10dp"
+    android:background="@drawable/border"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/find_friend_user_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/find_friend_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-black"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="@id/find_friend_user_image"
+        app:layout_constraintStart_toEndOf="@id/find_friend_user_image"
+        app:layout_constraintEnd_toStartOf="@id/find_friend_online"/>
+
+    <ImageView
+        android:id="@+id/find_friend_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/find_friend_user_name"
+        app:layout_constraintBottom_toBottomOf="@id/find_friend_user_name"/>
+
+    <TextView
+        android:id="@+id/find_friend_user_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/find_friend_user_name"
+        app:layout_constraintStart_toStartOf="@id/find_friend_user_name"
+        app:layout_constraintEnd_toEndOf="@id/find_friend_online" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/find_friend_user_image"
+        app:layout_constraintStart_toEndOf="@id/find_friend_user_image"
+        app:layout_constraintEnd_toEndOf="@id/find_friend_user_status">
+
+    <Button
+        android:id="@+id/accept_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:visibility="gone"
+        android:text="Accept"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg"
+        app:layout_constraintStart_toStartOf="@id/find_friend_user_status"
+        app:layout_constraintTop_toBottomOf="@id/find_friend_user_status"
+        app:layout_constraintEnd_toStartOf="@id/cancel_button"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="#F80505"
+        app:layout_constraintEnd_toEndOf="@id/find_friend_user_status"
+        app:layout_constraintTop_toTopOf="@id/accept_button"
+        app:layout_constraintBottom_toBottomOf="@id/accept_button"
+        app:layout_constraintStart_toEndOf="@id/accept_button"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

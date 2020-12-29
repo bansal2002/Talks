@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <View
+        android:id="@+id/user_profile_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".35"
+        app:layout_constraintVertical_bias="0"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintTop_toBottomOf="@id/user_profile_view"
+        app:layout_constraintBottom_toBottomOf="@id/user_profile_view"
+        app:layout_constraintStart_toStartOf="@id/user_profile_view"
+        app:layout_constraintEnd_toEndOf="@id/user_profile_view"/>
+
+    <TextView
+        android:id="@+id/user_profile_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@id/user_profile_image"
+        app:layout_constraintEnd_toEndOf="@id/user_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/user_profile_image"/>
+
+    <TextView
+        android:id="@+id/user_profile_user_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintWidth_percent=".8"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/user_profile_user_name"
+        app:layout_constraintEnd_toEndOf="@id/user_profile_user_name"
+        app:layout_constraintTop_toBottomOf="@id/user_profile_user_name"/>
+
+    <Button
+        android:id="@+id/profile_send_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:layout_marginTop="20dp"
+        android:text="Send Request"
+        android:visibility="visible"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintStart_toStartOf="@id/user_profile_user_status"
+        app:layout_constraintEnd_toEndOf="@id/user_profile_user_status"
+        app:layout_constraintTop_toBottomOf="@id/user_profile_user_status"/>
+
+    <Button
+        android:id="@+id/profile_decline_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="#F80505"
+        android:layout_marginTop="10dp"
+        android:text="cancel request"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintStart_toStartOf="@id/profile_send_request"
+        app:layout_constraintEnd_toEndOf="@id/profile_send_request"
+        app:layout_constraintTop_toBottomOf="@id/profile_send_request"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

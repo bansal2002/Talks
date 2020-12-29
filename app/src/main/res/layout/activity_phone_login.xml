@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneLoginActivity">
+
+    <EditText
+        android:id="@+id/mobile_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="ankit@gmail.com"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Mobile number"
+        android:inputType="phone"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/verfication_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="ankit@gmail.com"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Verification code"
+        android:inputType="numberPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_number"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/get_verfication_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:layout_marginTop="30dp"
+        android:text="Get otp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verfication_code"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/verified_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:layout_marginTop="30dp"
+        android:text="Login"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/get_verfication_code"
+        app:layout_constraintStart_toStartOf="@id/get_verfication_code"
+        app:layout_constraintTop_toBottomOf="@id/get_verfication_code"
+        app:layout_constraintWidth_percent=".8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "335460379648",
+    "project_id": "talks-d506c",
+    "storage_bucket": "talks-d506c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335460379648:android:df8ca3de2baf86d1c0fce5",
+        "android_client_info": {
+          "package_name": "com.example.talks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335460379648-jgan8kj4fooi2qi1a6n08q8m8n3qcih2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOvYxTL3l_J9_9NHqFgcOGWT3JxH4nPYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335460379648-jgan8kj4fooi2qi1a6n08q8m8n3qcih2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
